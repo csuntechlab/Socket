@@ -17,20 +17,22 @@ Via this approach, there is always a set of workers ready to respond to a networ
 ### Example
 $ socket -p "cat" -l -f -W 4 -B localhost -s 7000
 
-Notice in the above command line, we have added the -W option, with a value of 4.  The socket program will now maintain a pool of 4 workers.  The general operation of the program, the flow of the master node is as follows:
+Notice in the above command line, we have added the -W option, with a value of 4.  The socket program will now maintain a pool of 4 workers.  The general operation of the program, the general flow of the master node is as follows:
 
-* create() a socket bound to localhost:7000
-* listen() on said socket
-* fork() a 4 child processes
+* Create a socket: s=socket(AF_INET, SOCK_STREAM, 0)
+* Bind the socket to the host address and port:  bind(s, ...)
+* Listen for a network connection on the socket: listen(s, ...)
+* Create a pool of workers: fork() 
 * LOOP
-  * wait() for a child process to exit
-  * fork() an additional child process
+  * Wait for a child process to complete: wait()
+  * Replace the child process: fork()
 
 Whereas the flow of each child node (i.e., worker) is as follows:
 
-   * accept() on socket
-   * execv("cat", NULL) 
-   * exit()
+   * Accept the connection on the network socket: accept()
+   * Rewire the file descriptors
+   * Execute the defined program: execl("/bin/sh", "sh", "-c", "cat", NULL)
+   * Exit the program: signal: exit()
 
 
 ## Planned Usage
