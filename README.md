@@ -11,7 +11,8 @@ The above command line implements an 'echo' server.  The socket program creates 
 ## Proposed Changes
 In this project, we seek to modify the existing socket program to create a master node that manages a set of workers. An initial set of workers are created (forked) at the start of the program.  As new requests are received, one of the workers fields the request.  Once complete, the work exits and the master preforks another worker.
 
-Via this approach, there is always a set of workers ready to respond to a network request.
+Via this approach, there is always a set of workers ready to respond to a network request. As such, the turn-around time associated with each request is reduced, since the associated process-creation cost is not incurred.
+
 
 ### Example
 $ socket -p "cat" -l -f -W 4 -B localhost -s 7000
@@ -31,21 +32,15 @@ Whereas the flow of each child node (i.e., worker) is as follows:
    * execv("cat", NULL) 
    * exit()
 
-a set of child processes to serve as worker nodes.  Under this change, the program will reduce the turn-around time associated with program execution.  The large cost associated with process large cost of process creation
-
-Under this change, the socket program has greater utilize to serve as as mini-daemon.
 
 ## Planned Usage
 We are currently working on two other project that will immediately use the revised socket program.  The two projects are:
+
 * [https://github.com/csuntechlab/scgi-daemon](SCGI Daemon)
 * [https://github.com/csuntechlab/fcgi-daemon](FCGI Daemon)
+
 Both these projects already use the socket program, within the scgi-launch and fcgi-launch scripts.  The use is als follows:
 
 * socket -B ${ADDR} -s ${PORT} -b -f -q -l -p "${FCGI_WRAPPER} ${CGI_PROGRAM}"
-
-
-
-
-By use of this project, coupled with the SCGI and FCGI projects that include wrappers, we can quickly and easy create An SCGI server and a FCGI server.
 
 
