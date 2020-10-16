@@ -1,0 +1,14 @@
+Source: socket
+Section: net
+Priority: optional
+Maintainer: LENART Janos <ocsi@debian.org>
+Build-Depends: debhelper (>> 5.0.0)
+Standards-Version: 3.8.1
+
+Package: socket
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Multi purpose socket tool
+ The socket program is a simple tool for socket based connections. It
+ can be used to create simple daemons (in both standalone and inetd
+ mode), to connect to other daemons or to redirect ports.

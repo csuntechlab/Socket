@@ -1,0 +1,91 @@
+socket (1.1-10) unstable; urgency=low
+
+  * (Re-) Adopting the package. (closes: #487341)
+  * Applied excellent patch from Andras Pal <apal@cfa.harvard.edu>
+    + Fixed some missing headers
+    + (hopefully) complete support for UNIX domain sockets
+
+ -- LENART Janos <ocsi@debian.org>  Tue, 14 Apr 2009 09:49:04 +0200
+
+socket (1.1-9) unstable; urgency=low
+
+  * QA upload.
+    + Set maintainer to Debian QA Group <packages@qa.debian.org>.
+  * Fix typo in manpage. (Closes: #278350).
+  * Makefile: Remove -s from LDFLAGS. (Closes: #438035).
+  * Move DH_COMPAT to debian/compat and set to 5.
+  * Bump Standards Version to 3.8.0.
+
+ -- Barry deFreese <bdefreese@debian.org>  Fri, 05 Dec 2008 21:51:52 -0500
+
+socket (1.1-8) unstable; urgency=low
+
+  * Fixed errno definiation.                        (closes: Bug#218938)
+  * Now local bind address can be specified.
+    Thanks: Oscar Martin Gonzalez <idi@xolido.com>
+  * Upgrade Standards-Version.
+
+ -- Lenart Janos <ocsi@debian.org>  Mon,  3 Nov 2003 21:35:57 +0100
+
+socket (1.1-7) unstable; urgency=medium
+
+  * Data corruption bug fixed locally. Thanks to Wessel Dankers for
+    providing a very nice patch.                    (closes: Bug#173974)
+  * 32bit specific long's replaced with uint32_t's. (closes: Bug#173967)
+  * Emacs-thingy removed from this changelog.
+  * This is the last release of the 1.1 version. 2.0 coming soon.
+
+ -- Lenart Janos <ocsi@debian.org>  Tue,  7 Jan 2003 00:08:55 +0100
+
+socket (1.1-6) unstable; urgency=low
+
+  * Adopted package.                                 (closes: Bug#99733)
+  * Fully redebianized; prepared for building with debhelper version 3.
+    Patches agains the source were applied, changelog kept for historic
+    reasons (only cosmetically changed). Manpages are now installed by
+    debhelper, and not the Makefile in source. Hmm. That's all.
+
+ -- Lenart Janos <ocsi@debian.org>  Sun, 10 Jun 2001 19:06:03 +0200
+
+socket (1.1-5.1) unstable; urgency=low
+
+  * Bugsquash party NMU.
+  * Build with and build-depend on new debmake, in order to move to /usr
+    /share/doc and /usr/share/man    (closes: Bug#90423, #91071, #91665)
+  * Updated to policy version 3.1.1 so that build dependencies are
+    defined.
+  * Get dpkg-gencontrol to include the section and priority.
+  * Raised priority to optional to match the override file.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 14 Apr 2001 00:44:11 +0100
+
+socket (1.1-5) frozen unstable; urgency=low
+
+  * rebuild with latest debmake (fixes lintian warnings)
+  * updated standards-version
+
+ -- Peter Tobias <tobias@et-inf.fho-emden.de>  Mon, 30 Mar 1998 00:39:57 +0200
+
+socket (1.1-4) unstable; urgency=low
+
+  * libc6 version
+
+ -- Peter Tobias <tobias@et-inf.fho-emden.de>  Sun, 14 Sep 1997 11:56:56 +0200
+
+socket (1.1-3) unstable; urgency=low
+
+  * minor glibc fix
+
+ -- Peter Tobias <tobias@et-inf.fho-emden.de>  Thu, 19 Jun 1997 10:01:40 +0200
+
+socket (1.1-2) unstable; urgency=low
+
+  * changed name of upstream changelog file
+
+ -- Peter Tobias <tobias@et-inf.fho-emden.de>  Sun, 25 May 1997 00:27:03 +0200
+
+socket (1.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Peter Tobias <tobias@et-inf.fho-emden.de>  Tue, 14 Jan 1997 01:57:44 +0100

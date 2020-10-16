@@ -1,0 +1,32 @@
+This package was fully redebianized by Lenart Janos <ocsi@debian.org> on
+Sun, 10 Jun 2001 19:06:03 +0200.
+It was debianized for the first time at Tue, 14 Jan 1997 01:57:44 +0100
+by Peter Tobias <tobias@et-inf.fho-emden.de>.
+
+It was downloaded from ftp.cs.tu-berlin.de.
+
+Copyright:
+
+Copyright (C) 1992 by Juergen Nickelsen <nickel@cs.tu-berlin.de>
+except the file siglist.c, which is Copyright (C) 1989 Free Software
+Foundation, Inc.
+
+This applies to the Socket program, release Socket-1.1.
+
+    Socket is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation; either version 1, or (at your option) any
+    later version.
+
+    It is distributed in the hope that it will be useful, but WITHOUT ANY
+    WARRANTY; without even the implied warranty of MERCHANTABILITY or
+    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+    for more details.
+
+    You may have received a copy of the GNU General Public License along
+    with GNU Emacs or another GNU program; see the file COPYING.  If not,
+    write to me at the electronic mail address given above or to 
+    Juergen Nickelsen, Hertzbergstr. 28, 1000 Berlin 44, Germany.
+
+On Debian GNU/Linux systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL'.
