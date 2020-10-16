@@ -38,8 +38,8 @@ Whereas the flow of each child node (i.e., worker) is as follows:
 ## Planned Usage
 We are currently working on two other project that will immediately use the revised socket program.  The two projects are:
 
-* [https://github.com/csuntechlab/scgi-daemon](SCGI Daemon)
-* [https://github.com/csuntechlab/fcgi-daemon](FCGI Daemon)
+* [https://github.com/csuntechlab/scgi-daemon!](SCGI Daemon)
+* [https://github.com/csuntechlab/fcgi-daemon!](FCGI Daemon)
 
 Both these projects already use the socket program, within the scgi-launch and fcgi-launch scripts.  The use is als follows:
 
