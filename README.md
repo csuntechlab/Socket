@@ -1,4 +1,5 @@
 # Program: socket
+#### Original Source: apt-get source socket
 
 ## Description:
 The socket 1.1 program can be trivally used to create a server.  This server can listen on either a TCP or a UNIX domain socket, and when a connection to this socket is made, a specific program can be executed.  Under the current implementation, a separate process is created (forked) when  a socket connection is made.
